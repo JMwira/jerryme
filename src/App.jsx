@@ -1,16 +1,16 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+// import './App.css'
 import Header from './Components/Header'
 import Banner from './Components/Banner'
 
 function App() {
   return (
     <>
-      <div className='bg-white w-screen' >
-        <Header/>
-        <div id="home" className='py-16' >
+      <div className='bg-white w-screen h-auto' >
+        <div><Header/></div>
+        <div id="home" className='mt-[30px]' >
           <Banner/>
         </div>
         {/* <div id="home" className='w-full h-[600px] bg-blue-300' ></div>

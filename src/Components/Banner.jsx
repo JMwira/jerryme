@@ -3,13 +3,18 @@ import {TypeAnimation} from "react-type-animation"
 import{BsFillSunriseFill, BsFillTelephoneForwardFill, BsBriefcaseFill, BsFillSunsetFill, BsCloudSunFill, BsSunsetFill} from "react-icons/bs"
 import {FaMailBulk} from "react-icons/fa"
 import {ImInstagram} from "react-icons/im"
+import Me from "../assets/me.png"
 
 const Banner = () => {
   const checkDate = new Date();
   const h = checkDate.getHours();
   return (
     <div className='w-[85%] mx-auto mt-[120px] pb-10 flex '>
-      <div className='flex-1' >
+        
+      <div className='w-[35%] items-start justify-start ' >
+        <img src={Me} className='w-full h-[400px] object-contain self-start' alt="my photo" />
+      </div>
+      <div className='w-[58%] mt-10 ml-3' >
         <span className='font-light text-xl' >
             {h<12?
             <div className='flex items-center'>
@@ -56,8 +61,8 @@ const Banner = () => {
             various experiences, paths or origins.
         </span>
         <br/>
-        <div className='flex items-center mt-5 rounded-3xl w-[50%] bg-black ' >
-            <button className='flex rounded-3xl items-center px-[20px] py-2 border-2 border-black bg-white' >
+        <div className='flex items-center mt-5 rounded-full w-fit pr-6 bg-black ' >
+            <button className='flex rounded-full rounded-r-none items-center px-[25px] py-2 border-2 border-black bg-white' >
                 <BsBriefcaseFill className='pr-2 text-2xl' />
                 <span className='font-light uppercase' >Hire me</span>
             </button>
@@ -67,9 +72,6 @@ const Banner = () => {
                 <ImInstagram/>
             </div>
         </div>
-      </div>
-      <div className='flex-1' >
-        <img src="" alt="my photo" />
       </div>
     </div>
   )
