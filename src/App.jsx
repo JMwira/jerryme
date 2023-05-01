@@ -8,7 +8,11 @@ function App() {
   return (
     <>
       <div className='bg-white w-screen' >
-        <Header/>
+        <Header/>        
+        {/* <div id="home" className='w-full h-[600px] bg-blue-300' ></div>
+        <div id="about" className='w-full h-[600px] bg-blue-300' ></div>
+        <div id="experience" className='w-full h-[600px] bg-blue-600'></div>
+        <div id="contact" className='w-full h-[600px] bg-blue-300'></div> */}
       </div>
     </>
   )
