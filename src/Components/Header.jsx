@@ -5,10 +5,10 @@ import {BsPersonBadgeFill, BsBriefcaseFill, BsPeopleFill} from "react-icons/bs"
 import {Link} from "react-scroll"
 const Header = () => {
   return (
-    <div className='w-full flex items-center justify-between font-Quicksand px-10 py-5 fixed '>
+    <div className='w-full flex items-center justify-between font-Quicksand px-[7%] py-5 fixed'>
       <img src={Logo} className='w-[100px] object-cover '/>
       <ul className='flex text-blue-950 ' >
-        <Link smooth spy={true} to={'home'} className='px-2 flex items-center' activeClass='active' >
+        <Link smooth offset={-10} spy={true} to={'home'} className='px-2 flex items-center' activeClass='active' >
             <AiFillHome className='pr-2 text-xl'/>
             <span>Home</span>
         </Link>
