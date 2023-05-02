@@ -5,16 +5,16 @@ import {BsPersonBadgeFill, BsBriefcaseFill, BsPeopleFill} from "react-icons/bs"
 import {Link} from "react-scroll"
 const Header = () => {
   return (
-    <div className='w-full flex items-center justify-between font-Quicksand px-[7%] top-0 py-5 fixed'>
+    <div className='bg-white shadow-md z-50 w-full flex items-center justify-between font-Quicksand px-[7%] top-0 py-5 fixed'>
       <img src={Logo} className='w-[100px] object-cover '/>
-      <ul className='flex text-blue-950 ' >
-        <Link smooth offset={-10} spy={true} to={'home'} className='px-2 flex items-center' activeClass='active' >
+      <ul className='flex text-primary ' >
+        <Link smooth offset={'-100px'} spy={true} to={'home'} className='px-2 flex items-center' activeClass='active' >
             <AiFillHome className='pr-2 text-xl'/>
             <span>Home</span>
         </Link>
         <Link smooth spy={true} to={'about'} className='px-2 flex items-center' activeClass='active' >
             <BsPersonBadgeFill className='pr-2 text-xl'/>
-            <span>About me</span>
+            <span>Skills</span>
         </Link>
         <Link smooth spy={true} to={'experience'} className='px-2 flex items-center' activeClass='active' >
             <BsBriefcaseFill className='pr-2 text-xl'/>
