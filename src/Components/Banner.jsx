@@ -18,19 +18,19 @@ const Banner = () => {
         <span className='font-light text-xl' >
             {h<12?
             <div className='flex items-center'>
-                <BsFillSunriseFill className='pr-2 text-2xl' />
+                <BsFillSunriseFill className='text-yellow-400 pr-2 text-3xl' />
                 <span>Good morning</span>
             </div>
             :''}
             {h>12&&h<18?
             <div className='flex items-center'>
-                <BsCloudSunFill className='pr-2 text-2xl' />
+                <BsCloudSunFill className='text-yellow-600 pr-2 text-3xl' />
                 <span>Good afternoon</span>
             </div>
             :''}
             {h>18&&h<24?
             <div className='flex items-center'>
-                <BsFillSunsetFill className='pr-2 text-2xl' />
+                <BsFillSunsetFill className='text-yellow-950  pr-2 text-3xl' />
                 <span>Good evening</span>
             </div>
             :''}
@@ -48,7 +48,7 @@ const Banner = () => {
             cursor={true}
             repeat={Infinity}
         />
-        <span className='text-justify text-gray-500 font-light' >
+        <span className='text-justify text-sm text-gray-500 font-light' >
             Passionate software developer and system administrator with
             windows server 2012,
             I hold a bachelor's degree in cybersecurity and networking from
