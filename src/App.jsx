@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 // import './App.css'
 import Header from './Components/Header'
 import Banner from './Components/Banner'
+import Me from './Components/Me'
 
 function App() {
   return (
@@ -13,8 +14,11 @@ function App() {
         <div id="home" className='mt-[30px]' >
           <Banner/>
         </div>
+        <div id="about" className='mt-[30px]' >
+          <Me/>
+        </div>
         {/* <div id="home" className='w-full h-[600px] bg-blue-300' ></div>
-        <div id="about" className='w-full h-[600px] bg-blue-300' ></div>
+        
         <div id="experience" className='w-full h-[600px] bg-blue-600'></div>
         <div id="contact" className='w-full h-[600px] bg-blue-300'></div> */}
       </div>
