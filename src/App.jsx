@@ -6,6 +6,7 @@ import Header from './Components/Header'
 import Banner from './Components/Banner'
 import Me from './Components/Me'
 import Contact from './Components/Contact'
+import Skills from './Components/Skills'
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
         <div><Header/></div>
         <div id="home" className='mt-[30px]' >
           <Banner/>
+        </div>
+        <div id="skills" className='mt-[30px]' >
+          <Skills/>
         </div>
         <div id="about" className='mt-[30px]' >
           <Me/>
