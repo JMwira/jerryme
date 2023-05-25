@@ -25,22 +25,19 @@ const Contact = () => {
             <div className='flex items-start gap-x-2 mt-5'>
                 <div className='bg-gray-200 rounded-full text-primary p-2'><MdLocationPin className='text-lg'/></div>
                 <div className='flex flex-col'>
-                    <span>Goma/DRC</span>
-                    <span>Av 30 juin</span>
+                    <span>Kampala/ Uganda</span>
                 </div>
             </div>  
             <div className='flex items-start gap-x-2 mt-5'>
                 <div className='bg-gray-200 rounded-full text-primary p-2'><MdEmail className='text-lg'/></div>
                 <div className='flex flex-col'>
-                    <span className=''>jeymwira@gmail.com</span>
                     <span className=''>jaymwira@gmail.com</span>
                 </div>
             </div>
             <div className='flex items-start gap-x-2 mt-5'>
                 <div className='bg-gray-200 rounded-full text-primary p-2'><MdPhone className='text-lg'/></div>
                 <div className='flex flex-col'>
-                    <span>+243 973 281 762</span>
-                    <span>+243 839 649 236</span>
+                    <span>+256 743 946 392</span>
                 </div>
             </div>
         </div>
