@@ -2,16 +2,22 @@
 import React,{useState} from 'react'
 import {FaLaptopCode} from "react-icons/fa"
 import {ImMobile} from "react-icons/im"
+import {BsGlobe} from "react-icons/bs"
+import {TbZoomInAreaFilled} from "react-icons/tb"
 import {MdOutlineDraw} from "react-icons/md"
 import { data } from '../data'
 
 const Me = () => {
   const [Category, setCategory] = useState("web")
+  const [Project, setProject] = useState(null)
+  const ViewGallery = (id)=>{
+    setProject(id)
+  }
   return (
     <div className='w-[85%] pt-5 flex flex-col mx-auto justify-center items-center mt-0' >
       <div className='font-light text-4xl' >
         <span>My</span>
-        <span className='text-blue-800 font-light ml-1' >Experience</span>
+        <span className='text-blue-800 font-light ml-1' >Work</span>
       </div>
       <span className='text-center text-sm font-light max-w-[55%] mt-5' >
         I am a Diligent and versatile software developer and graphics designer,with great experience as a freelancer in mobile and web application development
@@ -37,7 +43,7 @@ const Me = () => {
               {
                 data.map((single_data)=>{
                   return(
-                    <div className='bg-gray-100 shadow-lg rounded-sm p-5'>
+                    <div className='bg-gray-100 shadow-lg rounded-sm p-5' key={single_data.id} >
                       <div className='font-bold items-center flex gap-x-2 pb-2' >
                         {
                           single_data.category=="web"&&<FaLaptopCode className='text-3xl'/>
@@ -54,7 +60,27 @@ const Me = () => {
                         {single_data.project_description}
                       </span>
                       <br/>
-                      <span className='text-blue-800 font-bold cursor-pointer' onClick={()=>window.location.assign(single_data.url)} >{single_data.url}</span>
+                      <div className='text-blue-600 font-bold' >
+                        <div className='gap-x-1 inline-block md:flex mt-2' >
+                        {
+                          single_data.project_tag.map(item=>(
+                            <span className='bg-primary mt-2 text-invert rounded-md px-2 py-1'>#{item}</span>
+                          ))
+                        }
+                        </div>
+                      </div>
+                      <span className='text-blue-800 font-bold cursor-pointer'>
+                        {
+                          single_data.url==""
+                          ?
+                          <span onClick={()=>ViewGallery(single_data.project_img)} className='flex gap-x-2 mt-2 items-center'>
+                            <TbZoomInAreaFilled/>
+                            Gallery</span>
+                          :<span onClick={()=>window.location.assign(single_data.url)} className='flex gap-x-2 mt-2 items-center'>
+                            <BsGlobe/>
+                            {single_data.url}</span>
+                        }
+                      </span>
                     </div>
                   )
                 })
@@ -62,6 +88,23 @@ const Me = () => {
             </div>
         </div>
       </div>
+      
+          {/* {
+            Project&&
+            <div className='fixed top-0 z-50 w-[100%] h-[100%] backdrop-blur-md' >
+                  <div className='w-[80%] mx-auto h-[80%] py-[5%]' >
+                    <div className='grid grid-cols-4 justify-start items-start' >
+                      {
+                        Project.map((item)=>{
+                          return(
+                            <img src={item}  className='w-[150px]' />
+                          )
+                        })
+                      }
+                    </div>
+                  </div>
+            </div>
+          } */}
     </div>
   )
 }
