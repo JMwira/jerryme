@@ -12,7 +12,7 @@ const Header = () => {
     window.location.assign('https://github.com/JMwira')
   }
   return (
-    <div className={toggle?'bg-white shadow-md z-50 w-full flex flex-col items-center justify-between font-Quicksand px-[7%] top-0 py-5 fixed':'bg-white shadow-md z-50 w-full flex items-center justify-between font-Quicksand px-[7%] top-0 py-5 fixed'}>
+    <div className={toggle?'bg-white shadow-md z-40 w-full flex flex-col items-center justify-between font-Quicksand px-[7%] top-0 py-5 fixed':'bg-white shadow-md z-50 w-full flex items-center justify-between font-Quicksand px-[7%] top-0 py-5 fixed'}>
       <div className={toggle?'justify-between w-full flex items-center':'justify-between w-full flex items-center md:w-fit'} >
         {
           toggle
@@ -27,7 +27,7 @@ const Header = () => {
         </div>
       </div>
       <ul className={toggle?'flex flex-col gap-y-4 mt-4 w-full':'hidden md:flex text-primary '} >
-        <Link onClick={()=>setToggle(!toggle)} smooth offset={'-100'} spy={true} to={'home'} className='px-2 flex items-center' activeClass='active' >
+        <Link onClick={()=>setToggle(!toggle)} smooth offset={-100} spy={true} to={'home'} className='px-2 flex items-center' activeClass='active' >
             <AiFillHome className='pr-2 text-xl'/>
             <span>Home</span>
         </Link>
