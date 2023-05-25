@@ -1,9 +1,14 @@
 import React from 'react'
 import {TypeAnimation} from "react-type-animation"
 import{BsFillSunriseFill, BsFillTelephoneForwardFill, BsBriefcaseFill, BsFillSunsetFill, BsCloudSunFill, BsSunsetFill} from "react-icons/bs"
-import {FaMailBulk} from "react-icons/fa"
+import {FaMailBulk, FaWhatsapp} from "react-icons/fa"
 import {ImInstagram} from "react-icons/im"
+
+import {MdLocationPin, MdEmail, MdLocalPhone, MdPhone} from "react-icons/md"
+import {FaTwitter, FaLinkedinIn} from "react-icons/fa"
 import Me from "../assets/me.png"
+import Mep from "../assets/mep.png"
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Banner = () => {
   const checkDate = new Date();
@@ -12,7 +17,7 @@ const Banner = () => {
     <div className='w-[85%] mx-auto md:pt-[120px] pb-10 flex md:flex-row flex-col'>
         
       <div className='w-[60%] mx-auto md:mx-0 md:w-[35%] md:items-start md:justify-start ' >
-        <img src={Me} className='w-full h-[400px] object-contain self-start' alt="my photo" />
+        <LazyLoadImage PlaceholderSrc={Mep} src={Me} className='w-full h-[400px] object-contain self-start' alt="my photo" />
       </div>
       <div className='w-[97%] md:w-[58%] md:mt-10 md:ml-3' >
         <span className='font-light text-xl' >
@@ -63,13 +68,19 @@ const Banner = () => {
         <br/>
         <div className='mx-auto md:mx-0 flex items-center mt-5 rounded-full w-fit pr-6 bg-black ' >
             <button className='flex rounded-full rounded-r-none items-center px-[25px] py-2 border-2 border-black bg-white' >
-                <BsBriefcaseFill className='pr-2 text-2xl' />
-                <span className='font-light uppercase' >Hire me</span>
+                {/* <BsBriefcaseFill className='pr-2 text-2xl' /> */}
+                <span className='font-light uppercase' >Contact me</span>
             </button>
-            <div className='flex justify-between w-[100px] ml-5 text-white' >
-                <BsFillTelephoneForwardFill/>
-                <FaMailBulk/>
-                <ImInstagram/>
+            <div className='flex justify-between w-fit gap-x-5 ml-5 text-white' >
+                <MdEmail/>
+                <a
+                  href="https://wa.me/256706563347"
+                  class="whatsapp_float"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaWhatsapp/>
+                </a>
             </div>
         </div>
       </div>
