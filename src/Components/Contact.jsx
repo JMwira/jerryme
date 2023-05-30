@@ -2,8 +2,28 @@ import React from 'react'
 import {MdLocationPin, MdEmail, MdLocalPhone, MdPhone} from "react-icons/md"
 import {ImLinkedin} from "react-icons/im"
 import {FaTwitter, FaLinkedinIn} from "react-icons/fa"
+import { useState } from 'react'
 
 const Contact = () => {
+  
+  const[Contact, setContact] = useState({
+      email:'',
+      message:''
+  })
+  const sendEmail = (e)=>{
+    e.preventDefault();
+    window.location.href='mailTo:jaymwira@gmail.com?body='+Contact.message
+  }
+  const contactEmail = (e)=>{
+    e.preventDefault();
+    window.location.href='mailTo:jaymwira@gmail.com'
+  }
+
+  const handleChange=(e)=>{
+      let value = e.target.value;
+      setContact({message:value})
+  }
+
   return (
     <div className='w-[90%] sm:w-[85%] flex flex-col mx-auto justify-center items-center' >
       <span className='text-4xl font-light text-center' >Hey there<br/>I would like to hear from you</span>
@@ -16,9 +36,9 @@ const Contact = () => {
               Contact me by filling this form or straight linking to my social media
             </span>
             <div className='flex flex-col gap-y-2 mt-5 text-sm font-light' >
-                <input className='text-center py-2 bg-transparent border-b-2 px-2' placeholder='email' />
-                <textarea className='text-center py-2 bg-transparent border-b-2 px-2 min-h-[100px] max-h-[100px]' placeholder='enter your message here' />
-                <button className='bg-invert p-2 px-10 text-primary rounded-full w-[200px] mx-auto mt-5' >Send</button>
+                {/* <input className='text-center py-2 bg-transparent border-b-2 px-2' placeholder='email' /> */}
+                <textarea onChange={handleChange} className='text-center py-2 bg-transparent rounded-sm border-[1px] px-2 min-h-[100px] max-h-[100px]' placeholder='enter your message here' />
+                <button onClick={sendEmail} className='bg-invert p-2 px-10 text-primary rounded-full w-[200px] mx-auto mt-5' >Send</button>
             </div>
         </div>
         <div className='gap-y-[100px] sm:gap-y-0 sm:flex mx-auto pb-6 flex-row gap-x-8 font-light' >            
@@ -30,7 +50,7 @@ const Contact = () => {
             </div>  
             <div className='flex items-start gap-x-2 mt-5'>
                 <div className='bg-gray-200 rounded-full text-primary p-2'><MdEmail className='text-lg'/></div>
-                <div className='flex flex-col'>
+                <div className='flex flex-col' onClick={contactEmail}>
                     <span className=''>jaymwira@gmail.com</span>
                 </div>
             </div>
@@ -48,7 +68,7 @@ const Contact = () => {
                 <span>&copy; mr!Perfect</span>
                 <FaTwitter className='text-xl'/>
                 <FaLinkedinIn className='text-xl'/>
-                <MdEmail className='text-xl'/>
+                <MdEmail onClick={contactEmail} className='text-xl'/>
         </div>
       </div>
     </div>
