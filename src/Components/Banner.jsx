@@ -12,14 +12,21 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Banner = () => {
   const checkDate = new Date();
+  
+  const contactEmail = (e)=>{
+    e.preventDefault();
+    window.location.href='mailTo:jaymwira@gmail.com'
+  }
+  
   const h = checkDate.getHours();
   return (
     <div className='w-[85%] mx-auto md:pt-[120px] pb-10 flex md:flex-row flex-col'>
         
       <div className='w-[60%] mx-auto md:mx-0 md:w-[35%] md:items-start md:justify-start ' >
-        <LazyLoadImage PlaceholderSrc={Mep} src={Me} className='w-full h-[400px] object-contain self-start' alt="my photo" />
+        <LazyLoadImage placeholderSrc={Mep} src={Me} className='w-full h-[400px] object-contain self-start' alt="my photo" />
       </div>
-      <div className='w-[97%] md:w-[58%] md:mt-10 md:ml-3' >
+      <div className='w-[100%] text-justify md:w-[58%] md:mt-10 md:ml-3' >
+        <div className='flex flex-col items-center md:items-start' >
         <span className='font-light text-xl' >
             {h<12?
             <div className='flex items-center'>
@@ -40,12 +47,16 @@ const Banner = () => {
             </div>
             :''}
         </span>
+        <span
+        className='mt-3 font-light text-xl md:text-3xl pb-[10px] outline-4 stroke-black'>
+          I am Jeremy,
+        </span>
         <TypeAnimation
-            className='mt-1 font-light text-3xl pb-[10px] uppercase outline-4 stroke-black'
+            className='mt-1 text-left font-extrabold text-xl uppercase md:text-3xl pb-[10px] outline-4 stroke-black'
             sequence={[
-                'I am Jeremy, a software developer',
+                'a software developer',
                 2000,
-                'I am Jeremy, a graphics designer',
+                'a graphics designer',
                 2000,
                 Infinity
             ]}
@@ -53,6 +64,7 @@ const Banner = () => {
             cursor={true}
             repeat={Infinity}
         />
+        </div>
         <span className='text-justify text-sm text-gray-500 font-light' >
             Passionate software developer and system administrator with
             windows server 2012,
@@ -72,10 +84,9 @@ const Banner = () => {
                 <span className='font-light uppercase' >Contact me</span>
             </button>
             <div className='flex justify-between w-fit gap-x-5 ml-5 text-white' >
-                <MdEmail/>
+                <MdEmail onClick={contactEmail}/>
                 <a
                   href="https://wa.me/256706563347"
-                  class="whatsapp_float"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
