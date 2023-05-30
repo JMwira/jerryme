@@ -64,7 +64,7 @@ const Me = () => {
                         <div className='gap-x-1 inline-block md:flex mt-2' >
                         {
                           single_data.project_tag.map(item=>(
-                            <span className='bg-primary mt-2 text-invert rounded-md px-2 py-1'>#{item}</span>
+                            <span key={Math.random()} className='bg-primary mt-2 text-invert rounded-md px-2 py-1'>#{item}</span>
                           ))
                         }
                         </div>
