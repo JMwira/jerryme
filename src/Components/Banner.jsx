@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 import {TypeAnimation} from "react-type-animation"
 import{BsFillSunriseFill, BsFillTelephoneForwardFill, BsBriefcaseFill, BsFillSunsetFill, BsCloudSunFill, BsSunsetFill} from "react-icons/bs"
 import {FaMailBulk, FaWhatsapp} from "react-icons/fa"
@@ -9,6 +9,7 @@ import {FaTwitter, FaLinkedinIn} from "react-icons/fa"
 import Me from "../assets/me.png"
 import Mep from "../assets/mep.png"
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import Splash from './Subcomponents/Splash'
 
 const Banner = () => {
   const checkDate = new Date();
@@ -19,36 +20,39 @@ const Banner = () => {
   }
   
   const h = checkDate.getHours();
+
+  const [Loaded, setLoaded] = useState(false)
+  
   return (
-    <div className='w-[85%] mx-auto md:pt-[120px] pb-10 flex md:flex-row flex-col'>
+    <div className='w-[85%] mx-auto md:pt-[100px] md:items-center pb-10 flex md:flex-row flex-col'>
         
       <div className='w-[60%] mx-auto md:mx-0 md:w-[35%] md:items-start md:justify-start ' >
-        <LazyLoadImage placeholderSrc={Mep} src={Me} className='w-full h-[400px] object-contain self-start' alt="my photo" />
+        <LazyLoadImage beforeLoad={()=>setLoaded(false)} afterLoad={()=>setTimeout(()=>{setLoaded(true)},3000)} placeholderSrc={Mep} src={Me} className='w-full h-[400px] object-contain self-start' alt="my photo" />
       </div>
       <div className='w-[100%] text-justify md:w-[58%] md:mt-10 md:ml-3' >
         <div className='flex flex-col items-center md:items-start' >
         <span className='font-light text-xl' >
             {h<12?
             <div className='flex items-center'>
-                <BsFillSunriseFill className='text-yellow-400 pr-2 text-3xl' />
+                <BsFillSunriseFill className='text-yellow-400 pr-2 text-2xl' />
                 <span>Good morning</span>
             </div>
             :''}
             {h>12&&h<18?
             <div className='flex items-center'>
-                <BsCloudSunFill className='text-yellow-600 pr-2 text-3xl' />
+                <BsCloudSunFill className='text-yellow-600 pr-2 text-2xl' />
                 <span>Good afternoon</span>
             </div>
             :''}
             {h>18&&h<24?
             <div className='flex items-center'>
-                <BsFillSunsetFill className='text-yellow-950  pr-2 text-3xl' />
+                <BsFillSunsetFill className='text-yellow-950  pr-2 text-2xl' />
                 <span>Good evening</span>
             </div>
             :''}
         </span>
         <span
-        className='mt-3 font-light text-xl md:text-3xl pb-[10px] outline-4 stroke-black'>
+        className='mt-3 font-light text-xl md:text-2xl pb-[10px] outline-4 stroke-black'>
           I am Jeremy,
         </span>
         <TypeAnimation
@@ -95,6 +99,10 @@ const Banner = () => {
             </div>
         </div>
       </div>
+      {
+        !Loaded
+        && <Splash/>
+      }
     </div>
   )
 }
