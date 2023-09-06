@@ -70,16 +70,16 @@ const Banner = () => {
         />
         </div>
         <span className='text-justify text-sm text-gray-500 font-light' >
-            Passionate software developer and system administrator with
-            windows server 2012,
-            I hold a bachelor's degree in cybersecurity and networking from
-            isbat university (uganda/Kampala) and two certificates in software engineering at
-            Aptech computer education (uganda/Kampala).
-            I worked as a freelancer, focusing on mobile and web development.
-            I always strive to hone my skills and abilities, through challenges and
-            opportunities for personal initiative and professional advancement and thereby also enhance
-            my teamwork skills in an environment made up of people with
-            various experiences, paths or origins.
+        I'm a <b className='font-bold text-black ' >Frontend Software Engineer</b> who loves leveraging technology to
+solve complex problems in efficient ways.
+Well, I am results-oriented, offering extensive experience in design and
+layout. Highly educated in various programming languages and coding.
+Looking for a position in a fast-paced company that appreciates hard
+work, dedication and evolving technical skills.
+I strongly believe in the power of <b className='font-bold text-black' >technology</b> and the ability to create
+solutions via programming and the art of software development.
+Therefore, I enjoy being challenged and engaging with projects that
+require me to work outside of my comfort zone and knowledge set.
         </span>
         <br/>
         <div className='mx-auto md:mx-0 flex items-center mt-5 rounded-full w-fit pr-6 bg-black ' >

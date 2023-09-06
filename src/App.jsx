@@ -7,6 +7,7 @@ import Banner from './Components/Banner'
 import Me from './Components/Me'
 import Contact from './Components/Contact'
 import Skills from './Components/Skills'
+import GitHubCalendar from 'react-github-calendar'
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
         </div>
         <div id="about" className='mt-[30px]' >
           <Me/>
+        </div>
+        <div className='md:p-6 px-6 pb-7 flex place-items-center justify-center ' >
+          <GitHubCalendar colorScheme='light' blockSize={15} username='JMwira' year={2023}/>
         </div>
         <div id="contact" className='w-full h-auto text-invert py-10 bg-primary'>
           <Contact/>

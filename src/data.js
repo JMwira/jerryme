@@ -58,5 +58,15 @@ export const data = [
         category:'web',
         url:'https://gbb-africa.org'
 
+    },
+    {
+        id:6,
+        project_name:"the Dev's Pacer",
+        project_img:[],
+        project_description:"Productivity and progress tracker web application",
+        project_tag:['react redux','react js', 'web dev', 'mongoDB', 'NodeJS', 'Express'],
+        category:'web',
+        url:'https://github.com/code-hack-gurus/the-pace'
+
     }
 ]
