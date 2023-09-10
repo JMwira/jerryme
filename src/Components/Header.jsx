@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import Logo from "../assets/jerryme.png"
+import Logo from "../assets/jerryme.webp"
 import {AiFillHome} from "react-icons/ai"
 import {BsPersonBadgeFill, BsBriefcaseFill, BsPeopleFill, BsGithub, BsDownload} from "react-icons/bs" 
 import {RiCloseLine, RiToggleFill, RiToggleLine} from "react-icons/ri"

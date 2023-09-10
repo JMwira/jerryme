@@ -6,8 +6,8 @@ import {ImInstagram} from "react-icons/im"
 
 import {MdLocationPin, MdEmail, MdLocalPhone, MdPhone} from "react-icons/md"
 import {FaTwitter, FaLinkedinIn} from "react-icons/fa"
-import Me from "../assets/me.png"
-import Mep from "../assets/mep.png"
+import Me from "../assets/me.webp"
+import Mep from "../assets/mep.webp"
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Splash from './Subcomponents/Splash'
 
@@ -90,7 +90,7 @@ require me to work outside of my comfort zone and knowledge set.
             <div className='flex justify-between w-fit gap-x-5 ml-5 text-white' >
                 <MdEmail onClick={contactEmail}/>
                 <a
-                  href="https://wa.me/256706563347"
+                  href="https://wa.me/243973281762"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

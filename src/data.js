@@ -1,13 +1,13 @@
-import a from "./assets/py/pyramid-1.jpg"
-import b from "./assets/py/pyramid-2.jpg"
-import c from "./assets/py/pyramid-3.jpg"
-import d from "./assets/py/pyramid-4.jpg"
-import e from "./assets/py/pyramid-5.jpg"
-import f from "./assets/py/pyramid-6.jpg"
-import g from "./assets/py/pyramid-7.jpg"
-import h from "./assets/py/pyramid-8.jpg"
-import i from "./assets/py/pyramid-9.jpg"
-import j from "./assets/py/pyramid-10.jpg"
+import a from "./assets/py/pyramid-1.webp"
+import b from "./assets/py/pyramid-2.webp"
+import c from "./assets/py/pyramid-3.webp"
+import d from "./assets/py/pyramid-4.webp"
+import e from "./assets/py/pyramid-5.webp"
+import f from "./assets/py/pyramid-6.webp"
+import g from "./assets/py/pyramid-7.webp"
+import h from "./assets/py/pyramid-8.webp"
+import i from "./assets/py/pyramid-9.webp"
+import j from "./assets/py/pyramid-10.webp"
 export const data = [
     {
         id:1,
