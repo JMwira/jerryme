@@ -8,6 +8,17 @@ import g from "./assets/py/pyramid-7.webp"
 import h from "./assets/py/pyramid-8.webp"
 import i from "./assets/py/pyramid-9.webp"
 import j from "./assets/py/pyramid-10.webp"
+// import k from "./assets/dmx.jpg"
+import l from "./assets/dp_logo.png"
+import m from "./assets/E-Bei.webp"
+import n from "./assets/ftsi-1.webp"
+import o from "./assets/ftsi-2.webp"
+// import p from "./assets/ftsi-2.jpg"
+// import q from "./assets/ftsi-2.jpg"
+// import p from "./assets/jw_businessCard-1.jpg"
+// import q from "./assets/jw-businessCard-2.jpg"
+import r from "./assets/lapt.webp"
+import s from "./assets/logo.png"
 export const data = [
     {
         id:1,
@@ -66,6 +77,86 @@ export const data = [
         project_description:"Productivity and progress tracker web application",
         project_tag:['react redux','react js', 'web dev', 'mongoDB', 'NodeJS', 'Express'],
         category:'web',
+        url:'https://github.com/code-hack-gurus/the-pace'
+
+    },
+    {
+        id:8,
+        project_name:"the Dev's Pacer",
+        project_img:l,
+        project_description:"Productivity and progress tracker web application",
+        project_tag:['react redux','react js', 'web dev', 'mongoDB', 'NodeJS', 'Express'],
+        category:'visual',
+        url:'https://github.com/code-hack-gurus/the-pace'
+
+    },
+    {
+        id:9,
+        project_name:"the Dev's Pacer",
+        project_img:m,
+        project_description:"Productivity and progress tracker web application",
+        project_tag:['react redux','react js', 'web dev', 'mongoDB', 'NodeJS', 'Express'],
+        category:'visual',
+        url:'https://github.com/code-hack-gurus/the-pace'
+
+    },
+    {
+        id:10,
+        project_name:"the Dev's Pacer",
+        project_img:n,
+        project_description:"Productivity and progress tracker web application",
+        project_tag:['react redux','react js', 'web dev', 'mongoDB', 'NodeJS', 'Express'],
+        category:'visual',
+        url:'https://github.com/code-hack-gurus/the-pace'
+
+    },
+    {
+        id:11,
+        project_name:"the Dev's Pacer",
+        project_img:o,
+        project_description:"Productivity and progress tracker web application",
+        project_tag:['react redux','react js', 'web dev', 'mongoDB', 'NodeJS', 'Express'],
+        category:'visual',
+        url:'https://github.com/code-hack-gurus/the-pace'
+
+    },
+    // {
+    //     id:12,
+    //     project_name:"the Dev's Pacer",
+    //     project_img:p,
+    //     project_description:"Productivity and progress tracker web application",
+    //     project_tag:['react redux','react js', 'web dev', 'mongoDB', 'NodeJS', 'Express'],
+    //     category:'visual',
+    //     url:'https://github.com/code-hack-gurus/the-pace'
+
+    // },
+    // {
+    //     id:13,
+    //     project_name:"the Dev's Pacer",
+    //     project_img:q,
+    //     project_description:"Productivity and progress tracker web application",
+    //     project_tag:['react redux','react js', 'web dev', 'mongoDB', 'NodeJS', 'Express'],
+    //     category:'visual',
+    //     url:'https://github.com/code-hack-gurus/the-pace'
+
+    // },
+    {
+        id:14,
+        project_name:"the Dev's Pacer",
+        project_img:r,
+        project_description:"Productivity and progress tracker web application",
+        project_tag:['react redux','react js', 'web dev', 'mongoDB', 'NodeJS', 'Express'],
+        category:'visual',
+        url:'https://github.com/code-hack-gurus/the-pace'
+
+    },
+    {
+        id:15,
+        project_name:"the Dev's Pacer",
+        project_img:s,
+        project_description:"Productivity and progress tracker web application",
+        project_tag:['react redux','react js', 'web dev', 'mongoDB', 'NodeJS', 'Express'],
+        category:'visual',
         url:'https://github.com/code-hack-gurus/the-pace'
 
     }

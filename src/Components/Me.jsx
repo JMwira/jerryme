@@ -6,6 +6,7 @@ import {BsGlobe} from "react-icons/bs"
 import {TbZoomInAreaFilled} from "react-icons/tb"
 import {MdOutlineDraw} from "react-icons/md"
 import { data } from '../data'
+// import "../"
 
 const Me = () => {
   const [Category, setCategory] = useState("web")
@@ -39,9 +40,12 @@ const Me = () => {
         </div>
         <div className='border-t-2 border-t-primary relative top-[-50px]' >
             <div className='w-10 h-10' ></div>
-            <div className='grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-5 mt-10' >
+            {
+              Category==='web'?
+              <div className='grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-5 mt-10' >
               {
                 data.map((single_data)=>{
+                  if(single_data.category==='web')
                   return(
                     <div className='bg-gray-100 shadow-lg rounded-sm p-5' key={single_data.id} >
                       <div className='font-bold items-center flex gap-x-2 pb-2' >
@@ -85,7 +89,21 @@ const Me = () => {
                   )
                 })
               }
+            </div>:
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-x-5 gap-y-5 mt-10 ' >
+              {
+                data.map((item)=>{
+                  if(item.category==='visual'){
+                    return(
+                      <div className='bg-primary shadow-lg flex rounded-sm p-5 h-[200px] justify-center items-center ' key={item.id} >
+                        <img src={item.project_img} alt="" className='object-contain h-full' />
+                      </div>
+                    )
+                  }
+                })
+              }
             </div>
+            }
         </div>
       </div>
       
